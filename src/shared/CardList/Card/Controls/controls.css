@@ -1,0 +1,78 @@
+.controls {
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.actions > * + * {
+    margin: 0 0 0 13px;
+}
+
+.karmaCounter {
+    align-self: center;
+}
+
+.karmaValue {
+    color: var(--grayC4);
+    padding: 0 0 0 0;
+}
+
+.karmaCounter > button.up:hover > svg > path {
+    fill: var(--green);
+}
+
+.karmaCounter > button.down:hover > svg > path {
+    fill: var(--orange);
+}
+
+svg.down {
+    transform: rotate(180deg);
+}
+
+.commentsButton {
+    display: flex;
+    align-items: normal;
+}
+
+.commentsButton * {
+    color: var(--grayC4);
+}
+
+.commentsNumber {
+    padding: 0 0 0 6px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.shareButton {
+    width: 20px;
+    height: 20px;
+}
+
+.saveButton {
+    width: 20px;
+    height: 20px;
+}
+
+@media all and (min-width: 1024px) {
+    .commentsButton {
+        display: none;
+    }
+
+    .controls {
+        order: 3;
+        flex: 0 0;
+        margin: 0 0 0 24px;
+    }
+
+    .actions {
+        display: none;
+    }
+}
